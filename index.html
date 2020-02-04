@@ -9,7 +9,7 @@
 body {
   font-family: 'Gelasio', serif;
   font-size: 18px;
-  padding: 20px;
+  padding: 10px;
 }
 
 
@@ -18,13 +18,13 @@ h1{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: black;
-  padding-left: 70px;
-
+  padding-left: 140px;
 }
 
+
 p {
-  width: 700px;
-  padding-left: 50px;
+  width: 750px;
+  padding-left: 80px;
 
 }
 
@@ -100,7 +100,7 @@ var svg = d3.select('#vis').append('svg')
 svg.call(tip);
 
 var projection = d3.geo.albersUsa()
-    .scale(900) // mess with this if you want
+    .scale(1200) // mess with this if you want
     .translate([width / 2, height / 2]);
 
 var path = d3.geo.path()
@@ -161,7 +161,7 @@ function loaded(error, usa, rate) {
 
     svg.append("g")
       .attr("class", "legendLinear")
-      .attr("transform", "translate(20,20)");
+      .attr("transform", "translate(80,20)");
 
     var legendLinear = d3.legend.color()
       .shapeWidth(30)
@@ -173,7 +173,7 @@ function loaded(error, usa, rate) {
 
 }
 </script>
-<p>Source: Centers for Disease Control and Prevention</p>
+<p style="font-family: 'Roboto', sans-serif; font-size: 15px;  font-weight: 700;">Source: Centers for Disease Control and Prevention</p>
 
 </body>
 </html>
